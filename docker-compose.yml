@@ -1,0 +1,8 @@
+version: "3"
+networks:
+  kalam:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.110.0.0/24
