@@ -1,0 +1,18 @@
+version: "3"
+services:
+  kalam-react:
+    container_name: kalam-react
+    build:
+      context: ./kalam-react
+    volumes:
+      - ./kalam-react:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - kalam
+    ports:
+      - "8999:8999"
+    command: "yarn start"
+    environment:
+      SERVICE_NAME: kalam-react
+    env_file:
+      - .env
