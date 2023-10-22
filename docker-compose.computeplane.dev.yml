@@ -16,3 +16,17 @@ services:
       SERVICE_NAME: kalam-react
     env_file:
       - .env
+
+  kalam-blogs:
+    build:
+      context: ./kalam-blogs
+    volumes:
+      - ./kalam-blogs:/app
+    networks:
+      - kalam
+    command: "go run cmd/main.go"
+    environment:
+      ENV: development
+      SERVICE_NAME: kalam-blogs
+    ports:
+      - 8998:8998
