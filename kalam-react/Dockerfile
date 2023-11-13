@@ -1,8 +1,7 @@
 FROM node:18.16.0-alpine
 
 # Add support for curl
-RUN apk update
-RUN npm install -g npm@9.5.1
+RUN apk update && npm install -g npm@9.5.1
 
 # Copying the files
 COPY . /usr/src/app
