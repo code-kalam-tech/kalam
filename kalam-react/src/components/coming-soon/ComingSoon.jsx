@@ -10,10 +10,14 @@ function ComingSoon() {
   async function getText() {
     //TODO: Why is container host name not getting resolved here ?
     // -> http://kalam-kalam-blogs-1:8998
-    const response = await fetch("http://localhost:8998/");
-    const json = await response.json();
+    try {
+      const response = await fetch("http://localhost:8998/");
+      const json = await response.json();
 
-    setText(json.message);
+      setText(json.message);
+    } catch (err) {
+      console.log(err);
+    }
   }
 
   return (

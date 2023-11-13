@@ -9,6 +9,3 @@ RUN go mod download
 ADD . /app
 
 EXPOSE 8998
-
-# CMD ["go", "run", "cmd/main.go"]
-

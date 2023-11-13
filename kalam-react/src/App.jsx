@@ -1,6 +1,7 @@
 import "./index.css";
 
-import App from "./components/App";
+import ComingSoon from "./components/coming-soon/ComingSoon";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -21,10 +22,10 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <ComingSoon />,
       },
     ],
-    errorElement: <App />,
+    errorElement: <ComingSoon />,
   },
 ]);
 
